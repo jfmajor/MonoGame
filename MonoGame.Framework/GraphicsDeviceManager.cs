@@ -392,6 +392,10 @@ namespace Microsoft.Xna.Framework
         {
             get
             {
+                if (_graphicsDevice == null)
+                {
+                    ((IGraphicsDeviceManager)this).CreateDevice();
+                }
                 return _graphicsDevice;
             }
         }
